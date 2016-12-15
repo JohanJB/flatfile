@@ -1,0 +1,36 @@
+---
+---
+<!DOCTYPE html>
+<html>
+    <head >
+        <title>{{page.title}} / {{site.title}}</title>
+        {% include head.html %}
+     
+    </head>
+    <header > 
+    {% include header.html %}
+    </header>
+    <body>
+        
+        {% for page in site.pages  %}
+        
+         {{ page.title }}
+        
+        {% endfor %}
+        
+        <ul>
+            
+  {% for post in site.posts %}
+           
+   
+  
+    {{ post.content }}
+  
+  {% endfor %}
+</ul>
+       
+    </body>
+    <footer> 
+    {% include footer.html %}
+    </footer>
+</html>
